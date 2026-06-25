@@ -1,0 +1,39 @@
+  <!DOCTYPE HTML>
+  <html>
+    <head>
+        <style>
+            table,tr,td{
+                border:1px solid black;
+                border-collapse:collapse;
+                padding:15px;
+                text-decoration: dotted;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>LOGIN PAGE</h1>
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="passward" placeholder="passward">
+        <button onclick="showpassward()">Submit</button>
+        <div id="result"></div>
+        <script>
+            let Students=[];
+            function showpassward(){
+                let name=document.getElementById("name").value;
+                let passward=document.getElementById("passward").value;
+                if(name==""){
+                    name.push(name);
+                document.getElementById("result").innerHTML=" Please enter the name";
+                }
+                else if(passward==""){
+                    passward.push(passward);
+                document.getElementById("result").innerHTML="please enter the passward";
+                }
+                else {
+                    document.getElementById("result").innerHTML=name+"<br>"+passward;
+                }
+
+            }
+        </script>
+    </body>
+    </html>
